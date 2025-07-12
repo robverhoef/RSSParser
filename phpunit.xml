@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="vendor/autoload.php"
+    backupGlobals="false"
+    colors="true"
+    displayDetailsOnPhpunitDeprecations="true"
+    processIsolation="false"
+    stopOnFailure="false">
+    <testsuites>
+        <testsuite name="Project Test Suite">
+            <directory>src/Romeen/RSS/Test</directory>
+        </testsuite>
+    </testsuites>
+
+    <php>
+        <env name="APP_ENV" value="testing" />
+    </php>
+</phpunit>

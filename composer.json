@@ -1,0 +1,26 @@
+{
+  "name": "romeen/rss",
+  "description": "Parse RSS2.0 feeds",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Romeen\\RSS\\": "src/Romeen/RSS"
+    }
+  },
+  "require": {
+    "php": ">=8.3"
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "authors": [
+    {
+      "name": "rob",
+      "email": "rob@romeen.nl"
+    }
+  ],
+  "require-dev": {
+    "phpunit/phpunit": "^12.2"
+  }
+}
