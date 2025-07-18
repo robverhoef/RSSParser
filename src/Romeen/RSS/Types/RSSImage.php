@@ -10,11 +10,11 @@ final class RSSImage
 
     public string $link;
 
-    public int $width;
+    public ?int $width;
 
-    public int $height;
+    public ?int $height;
 
-    public string $description;
+    public ?string $description;
 
     public function __constructor(string $url, string $title, string $link, int $width = 88, int $height = 31, string $description = '')
     {
