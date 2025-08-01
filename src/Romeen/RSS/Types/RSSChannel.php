@@ -22,75 +22,75 @@ class RSSChannel
     public string $description;
 
     /**
-     * @var string $language
+     * @var ?string $language
      */
-    public string $language;
+    public ?string $language;
     /**
-     * @var string $copyright
+     * @var ?string $copyright
      */
-    public string $copyright;
+    public ?string $copyright;
     /**
-     * @var string $managingEditor email
+     * @var ?string $managingEditor email
      */
-    public string $managingEditor;
+    public ?string $managingEditor;
     /**
-     * @var string $webMaster email
+     * @var ?string $webMaster email
      */
-    public string $webMaster;
+    public ?string $webMaster;
     /**
      * @var DateTime $pubDate
      */
     public DateTime $pubDate;
     /**
-     * @var DateTime $lastBuildDate
+     * @var ?DateTime $lastBuildDate
      */
-    public DateTime $lastBuildDate;
+    public ?DateTime $lastBuildDate;
     /**
-     * @var string $category
+     * @var ?string $category
      */
-    public string $category;
+    public ?string $category;
     /**
-     * @var string $generator
+     * @var ?string $generator
      */
-    public string $generator;
+    public ?string $generator;
     /**
-     * @var string $docs url
+     * @var ?string $docs url
      */
-    public string $docs;
+    public ?string $docs;
 
     // public string $cloud; not implemented yet
 
     /**
-     * @var int $ttl
+     * @var ?int $ttl
      */
-    public string $ttl; // minutes
+    public ?string $ttl; // minutes
 
     /**
-     * @var RSSImage $image
+     * @var ?RSSImage $image
      */
-    public RSSImage $image;
+    public ?RSSImage $image;
 
     /**
-     * @var int $rating
+     * @var ?int $rating
      */
-    public string $rating;
+    public ?string $rating;
 
     //  public string $textInput; //usued not implemented
 
     /** 
      * @var int[] $skipHours hours between 0-24
      */
-    public array $skipHours;
+    public ?array $skipHours;
 
     /** 
-     * @var string[] $skipDays day names 
+     * @var ?string[] $skipDays day names 
      */
-    public array $skipDays;
+    public ?array $skipDays;
 
     /** 
-     * @var RSSItem[] $item
+     * @var ?RSSItem[] $item
      */
-    public $item; // Note: rss spec defines var name as singular, although plural would be more appropriate.
+    public ?array $item;
 
     /**
      * @param string $title required
