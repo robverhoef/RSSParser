@@ -16,7 +16,7 @@ final class RSSImage
 
     public ?string $description;
 
-    public function __constructor(string $url, string $title, string $link, int $width = 88, int $height = 31, string $description = '')
+    public function __construct(string $url, string $title, string $link, int $width = 88, int $height = 31, string $description = '')
     {
         $this->url = $url;
         $this->title = $title;

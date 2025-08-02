@@ -55,7 +55,7 @@ final class RSSItem
      */
     public ?object $source = null;  // unused, looks like a link url attribute + text node
 
-    public function __constructor(string $title, string $link, string $description)
+    public function __construct(string $title, string $link, string $description)
     {
         $this->title = $title;
         $this->link = $link;

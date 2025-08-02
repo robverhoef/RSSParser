@@ -82,7 +82,9 @@ final class RSSParser
         $channel->docs = $c->docs;
         // $channel->cloud = $c->cloud;
         $channel->ttl = intval($c->ttl | '0'); // minutes
-        $channel->image = new RSSImage($c->image->url, $c->image->title, $c->image->link, $c->image->width, $c->image->height, $c->image->description);
+        if ($c->image) {
+            $channel->image = new RSSImage($c->image->url, $c->image->title, $c->image->link, $c->image->width, $c->image->height, $c->image->description);
+        }
         $channel->rating = $c->rating ?? '';
 
         //  public string $textInput; //usued
@@ -91,11 +93,11 @@ final class RSSParser
         $channel->item = [];
         // loop over items;
         foreach ($c->item as $item) {
-            $it = new RSSItem($item->title, $item->link);
-            $it->description = $item->description;
+            $it = new RSSItem($item->title, $item->link, $item->description);
             $it->author = $item->author;
             $it->category = $item->category;
             $it->comments = $item->comments;
+            $it->pubDate = new DateTime($item->pubDate);
             $ienc = $item->enclosure;
             $it->enclosure = $ienc['url'] ? new RSSEnclosure($ienc['url'], $ienc['type'], intval($ienc['length'])) : null;
             $channel->item[] = $it;
