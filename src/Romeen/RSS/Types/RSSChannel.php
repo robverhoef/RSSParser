@@ -38,9 +38,9 @@ class RSSChannel
      */
     public ?string $webMaster;
     /**
-     * @var DateTime $pubDate
+     * @var ?DateTime $pubDate
      */
-    public DateTime $pubDate;
+    public ?DateTime $pubDate;
     /**
      * @var ?DateTime $lastBuildDate
      */
