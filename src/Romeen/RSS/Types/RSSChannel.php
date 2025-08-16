@@ -24,63 +24,63 @@ class RSSChannel
     /**
      * @var ?string $language
      */
-    public ?string $language;
+    public ?string $language = null;
     /**
      * @var ?string $copyright
      */
-    public ?string $copyright;
+    public ?string $copyright = null;
     /**
      * @var ?string $managingEditor email
      */
-    public ?string $managingEditor;
+    public ?string $managingEditor = null;
     /**
      * @var ?string $webMaster email
      */
-    public ?string $webMaster;
+    public ?string $webMaster = null;
     /**
      * @var ?DateTime $pubDate
      */
-    public ?DateTime $pubDate;
+    public ?DateTime $pubDate = null;
     /**
      * @var ?DateTime $lastBuildDate
      */
-    public ?DateTime $lastBuildDate;
+    public ?DateTime $lastBuildDate = null;
     /**
      * @var ?string $category
      */
-    public ?string $category;
+    public ?string $category = null;
     /**
      * @var ?string $generator
      */
-    public ?string $generator;
+    public ?string $generator = null;
     /**
      * @var ?string $docs url
      */
-    public ?string $docs;
+    public ?string $docs = null;
 
     // public string $cloud; not implemented yet
 
     /**
      * @var ?int $ttl
      */
-    public ?string $ttl; // minutes
+    public ?string $ttl = null; // minutes
 
     /**
      * @var ?RSSImage $image
      */
-    public ?RSSImage $image;
+    public ?RSSImage $image = null;
 
     /**
      * @var ?int $rating
      */
-    public ?string $rating;
+    public ?string $rating = null;
 
     //  public string $textInput; //usued not implemented
 
     /** 
      * @var int[] $skipHours hours between 0-24
      */
-    public ?array $skipHours;
+    public ?array $skipHours = null;
 
     /** 
      * @var ?string[] $skipDays day names 
@@ -90,7 +90,7 @@ class RSSChannel
     /** 
      * @var ?RSSItem[] $item
      */
-    public ?array $item;
+    public ?array $item = null;
 
     /**
      * @param string $title required
@@ -102,6 +102,5 @@ class RSSChannel
         $this->title = $title;
         $this->link = $link;
         $this->description = $description;
-        $this->item = [];
     }
 }
